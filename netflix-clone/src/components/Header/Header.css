@@ -1,0 +1,155 @@
+
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Main Header */
+.header_container {
+  width: 100%;
+  min-height: 70px;
+  padding: 0 35px;
+  background-color: #141414;
+  color: #fff;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Left Side */
+.header_left {
+  display: flex;
+  align-items: center;
+}
+
+.header_left ul {
+  display: flex;
+  align-items: center;
+  gap: 22px;
+  list-style: none;
+}
+
+.header_left ul li {
+  font-size: 14px;
+  font-weight: 500;
+  white-space: nowrap;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+/* Netflix Logo */
+.header_left ul li:first-child {
+  color: #e50914;
+  font-size: 27px;
+  font-weight: 900;
+  letter-spacing: -1px;
+  margin-right: 5px;
+}
+
+/* Hover Effect */
+.header_left ul li:hover {
+  color: #b3b3b3;
+}
+
+/* Right Side */
+.header_right {
+  display: flex;
+  align-items: center;
+}
+
+.header_right ul {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  list-style: none;
+}
+
+.header_right ul li {
+  font-size: 14px;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: color 0.3s ease;
+}
+
+.header_right ul li:hover {
+  color: #b3b3b3;
+}
+
+/* Profile Icon Text */
+.header_right ul li:nth-child(5) {
+  font-size: 20px;
+}
+
+.header_right ul li:nth-child(6) {
+  font-size: 20px;
+}
+
+/* Tablet Responsive */
+@media (max-width: 1100px) {
+  .header_container {
+    padding: 0 20px;
+  }
+
+  .header_left ul {
+    gap: 13px;
+  }
+
+  .header_right ul {
+    gap: 12px;
+  }
+
+  .header_left ul li,
+  .header_right ul li {
+    font-size: 12px;
+  }
+
+  .header_left ul li:first-child {
+    font-size: 24px;
+  }
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+  .header_container {
+    min-height: 65px;
+    padding: 0 15px;
+  }
+
+  .header_left ul {
+    gap: 12px;
+  }
+
+  .header_left ul li:nth-child(n + 4) {
+    display: none;
+  }
+
+  .header_right ul {
+    gap: 12px;
+  }
+
+  .header_right ul li:nth-child(3),
+  .header_right ul li:nth-child(5),
+  .header_right ul li:nth-child(6) {
+    display: none;
+  }
+}
+
+/* Small Mobile */
+@media (max-width: 480px) {
+  .header_left ul li:nth-child(3) {
+    display: none;
+  }
+
+  .header_left ul li:first-child {
+    font-size: 22px;
+  }
+
+  .header_right ul {
+    gap: 10px;
+  }
+}
